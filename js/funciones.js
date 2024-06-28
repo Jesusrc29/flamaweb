@@ -1,23 +1,23 @@
 jQuery(document).ready(listo);
 jQuery(document).ready(function() {
-  const videoModal = document.getElementById('videoModal');
-  const playTrailerButton = document.getElementById('playTrailerButton');
-  const closeButton = document.querySelector('#videoModal .close');
-  const trailerVideo = document.getElementById('trailerVideo');
-  const infoModal = document.getElementById('infoModal');
-  const infoButton = document.getElementById('infoButton');
-  const infoCloseButton = document.querySelector('#infoModal .close');
+const videoModal = document.getElementById('videoModal');
+const playTrailerButton = document.getElementById('playTrailerButton');
+const closeButton = document.querySelector('#videoModal .close');
+const trailerVideo = document.getElementById('trailerVideo');
+const infoModal = document.getElementById('infoModal');
+const infoButton = document.getElementById('infoButton');
+const infoCloseButton = document.querySelector('#infoModal .close');
 
-  playTrailerButton.addEventListener('click', function() {
-      const trailerURL = '../img/trailer.mp4'; // Ajusta la URL al formato de embed
-      trailerVideo.src = trailerURL;
+playTrailerButton.addEventListener('click', function() {
+    const trailerURL = '../img/trailer.mp4'; 
+    trailerVideo.src = trailerURL;
 
-      videoModal.style.display = 'block';
-      trailerVideo.play();
-  });
+    videoModal.style.display = 'block';
+    trailerVideo.play();
+});
 
-  closeButton.addEventListener('click', function() {
-      videoModal.style.display = 'none';
+closeButton.addEventListener('click', function() {
+    videoModal.style.display = 'none';
       trailerVideo.src = ''; // Detener el video
   });
 
